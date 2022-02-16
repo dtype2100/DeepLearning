@@ -1,0 +1,16 @@
+def NAND(x1, x2): #NAND 함수 설정
+    x = np.array([x1, x2]) #입력
+    w = np.array([0.5, 0.5]) #weight(가중치) 할당
+    b = -0.7 #bias 할당
+    # temp = np.sum(x*w) + b
+    temp = np.dot(x, w) + b #weight 곱하기
+    if temp > 0: #NAND는 AND와 반대. 
+        return 0
+    else:
+        return 1
+
+
+data = [(0, 0), (1, 0), (0, 1), (1, 1)]
+for datum in data:
+    y = NAND(datum[0], datum[1])
+    print(f"{datum} -> {y}" )
