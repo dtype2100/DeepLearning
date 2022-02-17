@@ -1,0 +1,5 @@
+def sigmoid(x): #sigmoid 함수 구현
+  return 1 / (1 + np.exp(-x))
+
+x = np.array([-1.0, 1.0, 2.0]) #출력 
+sigmoid(x)
